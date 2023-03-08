@@ -10,7 +10,7 @@ body {
 
 .text {
     margin-left: 50px;
-    margin-top: 300px;
+    margin-top: 35vh;
     position: absolute;
 }
 
@@ -21,21 +21,10 @@ body {
 .tr2 {
     position: absolute;
     width: 25vw;
-    margin-left: 75vw;
+    margin-left: 74vw;
     margin-top: 73vh;
     z-index: 1;
 }
-
-
-/* .horizontalbox1 {
-    margin-top: 8em;
-    border-top: 2px solid white;
-}
-
-.horizontalbox2 {
-    margin-top: 3em;
-    border-top: 2px solid white;
-} */
 
 .navbar {
     position: absolute;
@@ -53,7 +42,7 @@ body {
     height: 9vh;
     margin-top: 90vh;
     margin-left: 63vw;
-    width: 37vw;
+    width: 36vw;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     font-size: 0.85em;
@@ -89,7 +78,8 @@ body {
 
 .photo3 {
     position: absolute;
-    width: 30vw;
+    width: 34vw;
+    z-index: 0;
 }
 
 .nav-links {
@@ -121,8 +111,84 @@ a {
 
 h2 {
     text-align: right;
-    font-size: 2em;
+    font-size: 3em;
     font-family: IBM Plex Serif, Georgia, 'Times New Roman', Times, serif;
-    margin-right: 5vh;
+    margin-right: 5vw;
     margin-top: 10vh;
+}
+
+.about {
+    position: absolute;
+    text-align: right;
+    z-index: 10;
+    width: 70vw;
+    margin-left: 24vw;
+    font-size: 0.9em;
+}
+
+.interests {
+    display: flex;
+    justify-content: space-around;
+    width: 65vw;
+    margin-left: 32vw;
+    margin-top: 35vh;
+}
+
+span {
+    font-size: 5em;
+}
+
+#titles {
+    font-size: 0.3em;
+    margin-top: auto;
+}
+
+.about2 {
+    width: 90vw;
+    text-align: center;
+    margin: 10vh auto;
+    font-size: 0.9em;
+}
+
+.blog {
+    width: 85vw;
+    text-align: center;
+    margin: 3vh auto;
+    font-size: 0.9em;
+}
+
+#last-cont {
+    height: 70vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 8vh;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-width: 2px 2px 0px 2px;
+    border-color: white;
+    border-style: solid;
+    width: 51vw;
+    height: 10vh;
+}
+
+.soc-links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 17vw;
+    height: 10vh;
+    align-self: center;
+}
+
+.soc-links:hover {
+    background-color: white;
+    color: black;
 }
