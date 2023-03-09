@@ -2,10 +2,20 @@ body {
     margin: 0;
     background-color: #1D1D1D;
     font-size: 24px;
-    background-image: url("../src/stars.svg");
-    background-repeat: no-repeat;
+    /* background-image: url("../src/stars.svg");
+    background-repeat: no-repeat; */
     font-family: IBM Plex Mono, 'Courier New', Courier, monospace;
     color: white;
+}
+
+
+.stars {
+    position: absolute;
+    height: 90vh;
+    width: 63vw;
+    background-image: url("../src/stars.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .text {
@@ -20,13 +30,14 @@ body {
 
 .tr2 {
     position: absolute;
-    width: 25vw;
-    margin-left: 74vw;
-    margin-top: 73vh;
+    width: 26vw;
+    margin-left: 73vw;
+    margin-top: 71vh;
     z-index: 1;
 }
 
 .navbar {
+    display: flex;
     position: absolute;
     background-color: #1D1D1D;
     height: 9vh;
@@ -34,6 +45,7 @@ body {
     width: 63vw;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    align-items: center;
 }
 
 .desc {
@@ -56,9 +68,10 @@ body {
     z-index: 5;
     position: absolute;
     margin-left: 63vw;
-    width: 2px;
-    height: 100vh;
+    /* width: 2px; */
+    height: 99vh;
     border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .photo1 {
@@ -83,11 +96,15 @@ body {
 }
 
 .nav-links {
+    /* border-right: 1px solid white;
+    border-left: 1px solid white; */
+    align-self: center;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     height: 9vh;
-    width: 15.025vw;
-    justify-content: center;
+    width: 15.75vw;
+    margin: auto;
 }
 
 .nav-links:hover {
@@ -98,6 +115,8 @@ body {
 a {
     color: white;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
 }
 
 .container {
