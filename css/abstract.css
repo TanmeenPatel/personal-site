@@ -30,7 +30,9 @@ body {
     margin: 35vh 20vw;
 }
 
-.extra {}
+.extra {
+    position: absolute;
+}
 
 .navbar {
     display: flex;
