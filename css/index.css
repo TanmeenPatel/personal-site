@@ -44,6 +44,10 @@ body {
     z-index: 1;
 }
 
+.tr3 {
+    display: none;
+}
+
 .navbar {
     display: flex;
     position: absolute;
@@ -73,6 +77,10 @@ body {
 
 #desc-text {
     font-size: 0.85em;
+}
+
+.menu-button {
+    display: none;
 }
 
 .vertical-div {
@@ -233,6 +241,10 @@ span {
         width: 225px;
     }
 
+    .tr2 {
+        display: none;
+    }
+
     .container {
         width: 100vw;
     }
@@ -275,6 +287,74 @@ span {
 
     #desc-text {
         font-size: 0.85em;
+        text-align: center;
     }
 
+    .tr3 {
+        display: block;
+        position: absolute;
+        width: 50vw;
+        margin-left: 50vw;
+        margin-top: 99.5vh;
+    }
+
+    .menu-button {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+        border: none;
+        margin-top: 3vh;
+        margin-left: 3vw;
+    }
+
+    #myLinks {
+        display: none;
+        /* position: absolute; */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 3vh 0;
+    }
+
+    #myLinks a {
+        display: block;
+        color: white;
+        width: 30vw;
+        margin: 10px;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #myLinks a.icon {
+        display: block;
+        position: absolute;
+    }
+
+    .ham-menu {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+        border: none;
+        margin-top: 3vh;
+        margin-left: 3vw;
+    }
+
+    #link1 {
+        background-color: #8D46B9;
+    }
+
+    #link2 {
+        background-color: #C8791D;
+    }
+
+    #link3 {
+        background-color: #369545;
+    }
+
+    #link4 {
+        background-color: #54B6C2;
+    }
 }

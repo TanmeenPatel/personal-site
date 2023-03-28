@@ -12,11 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="src/favicon.svg" type="image/x-icon">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <section>
         <div class="container">
+            <div id="myLinks">
+                <a href="#news" id="link1">HOME</a>
+                <a href="#news" id="link2">ABOUT ME</a>
+                <a href="#contact" id="link3">PROEJCTS</a>
+                <a href="#about" id="link4">BLOG</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="./src/hamburger.svg" alt="" class="ham-menu">
+            </a>
             <div class="stars">
                 <img src="src/triangles.svg" width="300px" class="tr1">
                 <img src="src/hello.svg" class="text" width="800px">
@@ -33,6 +52,7 @@
             </div>
             <div class="desc"><span id="desc-text">developer, designer, ice cream enthusiast</span></div>
             <img src="src/triangles2.svg" class="tr2">
+            <img src="src/triangles3.svg" class="tr3">
         </div>
     </section>
     <section id="aboutme">
