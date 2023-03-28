@@ -8,15 +8,21 @@ body {
     color: white;
 }
 
+.container {
+    height: 100vh;
+}
+
 .imgs {
     position: absolute;
-    height: 90vh;
+    height: 99vh;
     width: 30vw;
-    border-right: 2px solid white;
-    box-sizing: border-box;
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     margin-left: 30vw;
     background-image: url("../src/stars2.svg");
@@ -27,11 +33,35 @@ body {
 
 .title {
     width: 40%;
-    margin: 35vh 20vw;
+}
+
+.info {
+    margin-top: 2em;
+    font-size: 0.8em;
+    width: 50vw;
+    text-align: center;
+}
+
+.vertical-div {
+    position: absolute;
+    z-index: 5;
+    margin-left: 30vw;
+    height: 99vh;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .extra {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90vh;
+    height: 9vh;
+    width: 30vw;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 0.85em;
 }
 
 .navbar {
@@ -40,10 +70,9 @@ body {
     width: 70vw;
     margin-left: 30vw;
     margin-top: 90vh;
-    height: 10vh;
+    height: 9vh;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    box-sizing: border-box;
 }
 
 a {
@@ -58,7 +87,7 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 9vh;
     width: 17.5vw;
     margin: auto;
 }
@@ -66,4 +95,20 @@ a {
 .nav-links:hover {
     background-color: white;
     color: black;
+}
+
+.article {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+}
+
+.art-title {
+    font-size: 2em;
+    font-family: IBM Plex Serif, 'Times New Roman', Times, serif;
+}
+
+.art-info {
+    font-size: 0.9em;
+    width: 80vw;
 }

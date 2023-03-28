@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: #1D1D1D;
@@ -22,6 +26,10 @@ body {
     margin-left: 50px;
     margin-top: 35vh;
     position: absolute;
+}
+
+.text-mob {
+    display: none;
 }
 
 .tr1 {
@@ -210,4 +218,51 @@ span {
 .soc-links:hover {
     background-color: white;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .tr1 {
+        position: absolute;
+        width: 250px;
+    }
+
+    .container {
+        width: 100vw;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .text-mob {
+        display: block;
+        position: absolute;
+        margin-top: 35vh;
+        margin-left: 10vw;
+        width: 400px;
+    }
+
+    .vertical-div {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .photo1 {
+        width: 200px;
+        margin-left: 60vw;
+    }
+
+    .photo2 {
+        width: 200px;
+        margin-top: 15vh;
+        margin-left: 68vw;
+    }
+
+    .desc {
+        width: 100%;
+        margin-left: 0;
+    }
 }
