@@ -65,11 +65,14 @@ body {
     width: 36vw;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    font-size: 0.85em;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 4;
+}
+
+#desc-text {
+    font-size: 0.85em;
 }
 
 .vertical-div {
@@ -221,9 +224,13 @@ span {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
     .tr1 {
         position: absolute;
-        width: 250px;
+        width: 225px;
     }
 
     .container {
@@ -237,9 +244,9 @@ span {
     .text-mob {
         display: block;
         position: absolute;
-        margin-top: 35vh;
+        margin-top: 42vh;
         margin-left: 10vw;
-        width: 400px;
+        width: 320px;
     }
 
     .vertical-div {
@@ -252,17 +259,22 @@ span {
 
     .photo1 {
         width: 200px;
-        margin-left: 60vw;
+        margin-left: 43vw;
     }
 
     .photo2 {
         width: 200px;
-        margin-top: 15vh;
-        margin-left: 68vw;
+        margin-top: 18vh;
+        margin-left: 48vw;
     }
 
     .desc {
         width: 100%;
         margin-left: 0;
     }
+
+    #desc-text {
+        font-size: 0.85em;
+    }
+
 }
