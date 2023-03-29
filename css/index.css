@@ -235,6 +235,10 @@ span {
     display: none;
 }
 
+.ham-menu {
+    display: none;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 20px;
@@ -322,7 +326,7 @@ span {
     }
 
     #myLinks a {
-        display: none;
+        display: block;
         color: white;
         width: 30vw;
         margin: 10px;
