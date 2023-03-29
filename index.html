@@ -15,10 +15,12 @@
     <script>
         function myFunction() {
             var x = document.getElementById("myLinks");
+            var y = document.getElementById("desc");
             if (x.style.display === "flex") {
                 x.style.display = "none";
             } else {
                 x.style.display = "flex";
+                y.style.marginTop = "30vh";
             }
         }
     </script>
@@ -28,10 +30,10 @@
     <section>
         <div class="container">
             <div id="myLinks">
-                <a href="#news" id="link1">HOME</a>
-                <a href="#news" id="link2">ABOUT ME</a>
+                <a href="#" id="link1">HOME</a>
+                <a href="#aboutme" id="link2">ABOUT ME</a>
                 <a href="#contact" id="link3">PROEJCTS</a>
-                <a href="#about" id="link4">BLOG</a>
+                <a href="./abstract.html" id="link4">BLOG</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <img src="./src/hamburger.svg" alt="" class="ham-menu">
@@ -65,6 +67,12 @@
                 <br><br>
                 My interests lie in:
             </p>
+            <p class="about-mob">I’m Tanmeen Patel, a high school senior that dabbles in coding and making websites.
+                I’ve been curious for as long as I can remember, reading and learning everything
+                that interests me.
+                <br><br>
+                My interests lie in:
+            </p>
             <div class="interests">
                 <span>👨‍💻</span>
                 <span>📕</span>
@@ -82,7 +90,13 @@
             <p class="about2">
                 From a young age, I’ve felt that rush of adrenaline while solving a problem or doing something I find
                 remotely cool. I’ve tried seeking this feeling everywhere I go, leading to some truly unique hobbies.
-
+                <br><br>
+                I love solving Rubik’s cubes, playing football, taking photos, and doing (an extremely watered down
+                version of) parkour.
+            </p>
+            <p class="about2-mob">From a young age, I’ve felt that rush of adrenaline while solving a problem or doing
+                something I find remotely cool. I’ve tried seeking this feeling everywhere I go.
+                <br><br>
                 I love solving Rubik’s cubes, playing football, taking photos, and doing (an extremely watered down
                 version of) parkour.
             </p>
@@ -92,6 +106,11 @@
                 prisons
                 actually work and why I hate Anupamaa.
             </p>
+            <div class="socials-mob">
+                <a href="https://github.com/TanmeenPatel" class="soc-links">GITHUB</a>
+                <a href="#" class="soc-links">LINKEDIN</a>
+                <a href="mailto:tanmeenpatel@gmail.com" class="soc-links">EMAIL</a>
+            </div>
             <div class="footer">
                 <img src="./src/polygons.svg" height="220px" class="polygons">
                 <div class="socials">
