@@ -16,11 +16,19 @@
         function myFunction() {
             var x = document.getElementById("myLinks");
             var y = document.getElementById("desc");
+            var z = document.getElementById("tr3");
+            var w = document.getElementById("stars");
             if (x.style.display === "flex") {
                 x.style.display = "none";
+                y.style.marginTop = "90vh";
+                z.style.marginTop = '99.5vh'
+                w.style.backgroundImage = 'url("./src/stars.svg")'
             } else {
                 x.style.display = "flex";
-                y.style.marginTop = "30vh";
+                y.style.marginTop = "75vh";
+                z.style.marginTop = '84.5vh'
+                w.style.backgroundImage = 'none'
+
             }
         }
     </script>
@@ -38,7 +46,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <img src="./src/hamburger.svg" alt="" class="ham-menu">
             </a>
-            <div class="stars">
+            <div class="stars" id="stars">
                 <img src="src/triangles.svg" width="300px" class="tr1">
                 <img src="src/hello.svg" class="text" width="800px">
                 <img src="src/hello_mob.svg" class="text-mob" width="400px">
@@ -52,9 +60,9 @@
                 <a href="home" class="nav-links">PROJECTS</a>
                 <a href="./abstract.html" class="nav-links">BLOG</a>
             </div>
-            <div class="desc"><span id="desc-text">developer, designer, ice cream enthusiast</span></div>
+            <div class="desc" id="desc"><span id="desc-text">developer, designer, ice cream enthusiast</span></div>
             <img src="src/triangles2.svg" class="tr2">
-            <img src="src/triangles3.svg" class="tr3">
+            <img src="src/triangles3.svg" class="tr3" id="tr3">
         </div>
     </section>
     <section id="aboutme">
