@@ -231,6 +231,10 @@ span {
     color: black;
 }
 
+#myLinks {
+    display: none;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 20px;
@@ -318,7 +322,7 @@ span {
     }
 
     #myLinks a {
-        display: block;
+        display: none;
         color: white;
         width: 30vw;
         margin: 10px;
