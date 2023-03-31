@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat; */
     font-family: IBM Plex Mono, 'Courier New', Courier, monospace;
     color: white;
+    box-sizing: border-box;
 }
 
 .container {
@@ -14,8 +15,21 @@ body {
 
 .imgs {
     position: absolute;
-    height: 99vh;
+    height: 90vh;
     width: 30vw;
+    border-right: 2px solid white;
+}
+
+#landing-img {
+    width: 25vw;
+    margin: 1.5em;
+}
+
+#tr1 {
+    position: absolute;
+    margin-left: 85vw;
+    width: 15vw;
+    z-index: 2;
 }
 
 .main {
@@ -61,6 +75,7 @@ body {
     width: 30vw;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    border-right: 2px solid white;
     font-size: 0.85em;
 }
 
