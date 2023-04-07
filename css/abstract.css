@@ -60,6 +60,10 @@ body {
     z-index: 2;
 }
 
+.tr1-mob {
+    display: none;
+}
+
 .desc {
     font-size: 0.9em;
     display: flex;
@@ -164,6 +168,16 @@ a {
         font-size: 20px;
     }
 
+    #tr1 {
+        display: none;
+    }
+
+    .tr1-mob {
+        display: inline;
+        position: absolute;
+        width: 60%;
+    }
+
     #myLinks {
         display: none;
         /* position: absolute; */
@@ -212,5 +226,19 @@ a {
 
     #link4 {
         background-color: #54B6C2;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .heading {
+        width: 80%;
+        margin: auto;
+    }
+
+    .imgs {
+        border-right: none;
+        position: absolute;
     }
 }
