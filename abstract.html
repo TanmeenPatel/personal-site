@@ -10,47 +10,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="src/favicon.svg" type="image/x-icon">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            var y = document.getElementById("desc");
+            var z = document.getElementById("tr3");
+            var w = document.getElementById("stars");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+                y.style.marginTop = "90vh";
+                z.style.marginTop = '99.5vh'
+                w.style.backgroundImage = 'url("./src/stars.svg")'
+            } else {
+                x.style.display = "flex";
+                y.style.marginTop = "75vh";
+                z.style.marginTop = '84.5vh'
+                w.style.backgroundImage = 'none'
 
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <img src="./src/trianglesab.svg" alt="" id="tr1">
-            <div class="imgs">
-                <img src="./src/photo1abs.png" alt="" id="landing-img">
-            </div>
-            <!-- <div class="vertical-div"></div> -->
-            <div class="main">
-                <img src="./src/abstract.svg" alt="" class="title">
-                <p class="info">Just a place to store my thoughts about unique and cool topics. I post every once in a
-                    while
-                    at no regular time interval, so just keep visiting the page.</p>
-            </div>
-            <div class="extra">i like movies and tech...</div>
-            <div class="navbar">
-                <a href="./index.html" class="nav-links">HOME</a>
-                <a href="home" class="nav-links">ABOUT ME</a>
-                <a href="home" class="nav-links">PROJECTS</a>
-                <a href="#" class="nav-links">BLOG</a>
-            </div>
+    <section class="sect1">
+        <div id="myLinks">
+            <a href="./index.html" id="link1">HOME</a>
+            <a href="#aboutme" id="link2">ABOUT ME</a>
+            <a href="#contact" id="link3">PROEJCTS</a>
+            <a href="#" id="link4">BLOG</a>
         </div>
-
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="./src/hamburger.svg" alt="" class="ham-menu">
+        </a>
+        <img src="./src/trianglesab.svg" alt="" id="tr1">
+        <div class="imgs">
+            <img src="./src/photo1abs.png" alt="" id="landing-img">
+        </div>
+        <div class="main">
+            <img src="./src/abstract.svg" alt="">
+            <p id="landing-text">Just a place to store my thoughts about unique and cool topics. I post every once in
+                a while at no regular time interval, so just keep visiting the page. </p>
+        </div>
+        <div class="desc">i like movies and tech...</div>
+        <div class="navbar">
+            <a href="#" class="nav-links">HOME</a>
+            <a href="#aboutme" class="nav-links">ABOUT ME</a>
+            <a href="home" class="nav-links">PROJECTS</a>
+            <a href="#" class="nav-links">BLOG</a>
+        </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="article">
-                <div class="art-text">
-                    <h2 class="art-title">Do Prisons Work?</h2>
-                    <p class="art-info">
-                        Prisons have been in use for over a millennium, but are they really effective in fulfilling
-                        their
-                        goals? Actually, what are their goals?
-                    </p>
-                </div>
-            </div>
+    <section class="sect2">
+        <div class="article">
+            <h2>Do Prisons Work?</h2>
+            <img src="./src/read.svg" class="read-more">
+            <span class="about-art">Prisons have been in use for over a millennium, but are they really effective in
+                fulfilling their goals? Actually, what are their goals?
+                <br><br>
+                6 MINS, 345 WORDS
+            </span>
+        </div>
+        <div class="article">
+            <img src="./src/read.svg" class="read-more">
+            <h2>Why I hate Anupamaa.</h2>
+            <span class="about-art">I am of the opinion that Anupamaa represents everything that is wrong with the
+                modern day Indian soap opera. You cant change my opinion.
+                <br><br>
+                4 MINS, 210 WORDS
+            </span>
         </div>
     </section>
 </body>

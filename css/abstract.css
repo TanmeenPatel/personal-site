@@ -1,103 +1,92 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
-    background-color: #1D1D1D;
     font-size: 24px;
-    /* background-image: url("../src/stars.svg");
-    background-repeat: no-repeat; */
+    background-color: #1d1d1d;
     font-family: IBM Plex Mono, 'Courier New', Courier, monospace;
     color: white;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.container {
-    height: 100vh;
+.sect1 {
+    height: 99vh;
+    border-bottom: 2px solid white;
 }
 
 .imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    height: 90vh;
     width: 30vw;
+    height: 90vh;
     border-right: 2px solid white;
-}
-
-#landing-img {
-    width: 25vw;
-    margin: 1.5em;
-}
-
-#tr1 {
-    position: absolute;
-    margin-left: 85vw;
-    width: 15vw;
-    z-index: 2;
+    border-bottom: 2px solid white;
 }
 
 .main {
+    background-image: url(../src/stars2.svg);
+    background-repeat: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left: 30vw;
-    background-image: url("../src/stars2.svg");
-    background-repeat: cover;
-    height: 90vh;
     width: 70vw;
-}
-
-.title {
-    width: 40%;
-}
-
-.info {
-    margin-top: 2em;
-    font-size: 0.8em;
-    width: 50vw;
-    text-align: center;
-}
-
-.vertical-div {
-    position: absolute;
-    z-index: 5;
+    height: 90vh;
     margin-left: 30vw;
-    height: 99vh;
-    border-right: 2px solid white;
     border-bottom: 2px solid white;
 }
 
-.extra {
+#landing-img {
+    width: 25vw;
+}
+
+#landing-text {
+    text-align: center;
+    margin-top: 5vh;
+    width: 60vw;
+    font-size: 0.9em;
+}
+
+#tr1 {
     position: absolute;
+    width: 15vw;
+    margin-left: 85vw;
+    z-index: 2;
+}
+
+.desc {
+    font-size: 0.9em;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 90vh;
-    height: 9vh;
+    align-items: center;
+    position: absolute;
     width: 30vw;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    height: 9vh;
+    margin-top: 90vh;
+    /* border-top: 2px solid white;
+    border-bottom: 2px solid white; */
     border-right: 2px solid white;
-    font-size: 0.85em;
 }
 
 .navbar {
     display: flex;
+    align-items: center;
     position: absolute;
-    width: 70vw;
-    margin-left: 30vw;
     margin-top: 90vh;
+    margin-left: 30vw;
     height: 9vh;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
+    width: 70vw;
 }
 
 .nav-links {
+    color: white;
+    text-decoration: none;
     align-self: center;
     display: inline-flex;
     justify-content: center;
@@ -112,18 +101,116 @@ a {
     color: black;
 }
 
+.sect2 {
+    width: 100vw;
+}
+
 .article {
     display: flex;
-    justify-content: center;
-    width: 80vw;
+    flex-direction: column;
+    margin: 8vh auto;
+    width: 90vw;
+    padding: 1.5em;
 }
 
-.art-title {
+h2 {
+    /* font-weight: 300; */
+    letter-spacing: 1px;
     font-size: 2em;
     font-family: IBM Plex Serif, 'Times New Roman', Times, serif;
+    margin-top: 0.1em;
 }
 
-.art-info {
-    font-size: 0.9em;
-    width: 80vw;
+.article:first-of-type {
+    margin-top: 5vh;
+}
+
+.about-art {
+    display: block;
+    font-size: 0.8em;
+    width: 70vw;
+}
+
+.read-more {
+    justify-self: center;
+    margin-left: 80vw;
+    width: 7vw;
+    position: absolute;
+    margin-top: 0.85em;
+}
+
+.article:nth-of-type(2n) {
+    background-color: #2E2E2E;
+    border-radius: 6px;
+}
+
+#myLinks {
+    display: none;
+}
+
+.ham-menu {
+    display: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    #myLinks {
+        display: none;
+        /* position: absolute; */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 3vh 0;
+    }
+
+    #myLinks a {
+        display: block;
+        color: white;
+        width: 30vw;
+        margin: 10px;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    #myLinks a.icon {
+        display: block;
+        position: absolute;
+    }
+
+    .ham-menu {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+        border: none;
+        margin-top: 3vh;
+        margin-left: 3vw;
+    }
+
+    #link1 {
+        background-color: #8D46B9;
+    }
+
+    #link2 {
+        background-color: #C8791D;
+    }
+
+    #link3 {
+        background-color: #369545;
+    }
+
+    #link4 {
+        background-color: #54B6C2;
+    }
 }
