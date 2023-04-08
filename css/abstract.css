@@ -42,6 +42,10 @@ body {
     border-bottom: 2px solid white;
 }
 
+.main-mob {
+    display: none;
+}
+
 #landing-img {
     width: 25vw;
 }
@@ -175,7 +179,7 @@ a {
     .tr1-mob {
         display: inline;
         position: absolute;
-        width: 60%;
+        width: 55%;
     }
 
     #myLinks {
@@ -234,11 +238,39 @@ a {
 
     .heading {
         width: 80%;
-        margin: auto;
+        margin: 55vh 5vh;
     }
 
     .imgs {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .desc {
         border-right: none;
+        width: 100vw;
+        margin-top: 0;
+    }
+
+    #landing-img {
         position: absolute;
+        width: 60vw;
+        margin-left: vw;
+        margin-top: 15vh;
+    }
+
+    .main {
+        display: none;
+    }
+
+    .main-mob {
+        height: 90vh;
+        display: block;
+        background-image: url(../src/starsabmob.svg);
+        background-repeat: cover;
+        border-bottom: 2px solid white;
     }
 }
