@@ -35,6 +35,7 @@ body {
 
 .tr1 {
     position: absolute;
+    user-select: none;
 }
 
 .tr2 {
@@ -43,10 +44,12 @@ body {
     margin-left: 73vw;
     margin-top: 71vh;
     z-index: 1;
+    user-select: none;
 }
 
 .tr3 {
     display: none;
+    user-select: none;
 }
 
 .navbar {
@@ -98,6 +101,7 @@ body {
     margin-left: 65vw;
     margin-top: 3vh;
     width: 400px;
+    user-select: none;
 }
 
 .photo2 {
@@ -106,12 +110,14 @@ body {
     margin-top: 34vh;
     width: 400px;
     z-index: 2;
+    user-select: none;
 }
 
 .photo3 {
     position: absolute;
     width: 34vw;
     z-index: 0;
+    user-select: none;
 }
 
 .nav-links {
