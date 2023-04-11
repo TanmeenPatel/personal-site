@@ -16,17 +16,13 @@
         function myFunction() {
             var x = document.getElementById("myLinks");
             var y = document.getElementById("desc");
-            var z = document.getElementById("tr3");
             var w = document.getElementById("stars");
             if (x.style.display === "flex") {
                 x.style.display = "none";
-                y.style.marginTop = "90vh";
-                z.style.marginTop = '99.5vh'
                 w.style.backgroundImage = 'url("./src/stars.svg")'
             } else {
                 x.style.display = "flex";
                 y.style.marginTop = "75vh";
-                z.style.marginTop = '84.5vh'
                 w.style.backgroundImage = 'none'
 
             }
@@ -50,12 +46,16 @@
         <div class="imgs">
             <img src="./src/photo1abs.png" alt="" id="landing-img">
         </div>
+        <div class="main-mob">
+            <img src="./src/photoabsmob.svg" alt="" id="landing-img">
+            <img src="./src/abstract.svg" alt="" class="heading">
+        </div>
         <div class="main">
             <img src="./src/abstract.svg" alt="" class="heading">
             <p id="landing-text">Just a place to store my thoughts about unique and cool topics. I post every once in
                 a while at no regular time interval, so just keep visiting the page. </p>
         </div>
-        <div class="desc">i like movies and tech...</div>
+        <div class="desc" id="desc">i like movies and tech...</div>
         <div class="navbar">
             <a href="#" class="nav-links">HOME</a>
             <a href="#aboutme" class="nav-links">ABOUT ME</a>
