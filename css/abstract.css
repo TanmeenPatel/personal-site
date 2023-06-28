@@ -102,6 +102,7 @@ body {
     height: 9vh;
     width: 17.5vw;
     margin: auto;
+    text-align: center;
 }
 
 .nav-links:hover {
@@ -144,7 +145,7 @@ h2 {
     margin-left: 83vw;
     width: 7vw;
     position: absolute;
-    margin-top: 0.85em;
+    margin-top: 2em;
 }
 
 .article:nth-of-type(2n) {
@@ -163,8 +164,18 @@ h2 {
 a {
     color: white;
     text-decoration: none;
-    width: 100%;
-    text-align: center;
+}
+
+.article-link {
+    text-align: unset;
+}
+
+.article-link-svg {
+    justify-self: center;
+    margin-left: 83vw;
+    width: 7vw;
+    position: absolute;
+    margin-top: 2em;
 }
 
 @media (max-width: 768px) {
