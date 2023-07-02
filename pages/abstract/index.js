@@ -1,9 +1,26 @@
-import Head from "next/head";
 import PostCard from "@/components/PostCard/PostCard";
+import Head from "next/head";
+
+import { useEffect, useState } from "react";
 
 import styles from "@/styles/Abstract.module.css";
 
 export default function AbstractPage() {
+    let [hamOpen, setHamOpen] = useState(0);
+    let toggleHam = () => {
+        setHamOpen(hamOpen ? 0 : 1);
+    };
+
+    useEffect(() => {
+        var x = document.getElementById("myLinks");
+        var y = document.getElementById("desc");
+        if (hamOpen == 0) {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+            y.style.marginTop = "75vh";
+        }
+    }, [hamOpen]);
     return (
         <>
             <Head>
@@ -30,10 +47,10 @@ export default function AbstractPage() {
             </Head>
             <section className={styles.sect1}>
                 <div id="myLinks">
-                    <a href="./index.html" id="link1">
+                    <a href="/" id="link1">
                         HOME
                     </a>
-                    <a href="./index.html#aboutme" id="link2">
+                    <a href="/#aboutme" id="link2">
                         ABOUT ME
                     </a>
                     <a
@@ -47,11 +64,7 @@ export default function AbstractPage() {
                         BLOG
                     </a>
                 </div>
-                <a
-                    href="javascript:void(0);"
-                    className={styles.icon}
-                    onclick="myFunction()"
-                >
+                <a href="#" className={styles.icon} onClick={toggleHam}>
                     <img
                         src="/assets/hamburger-ab.svg"
                         alt=""
@@ -134,7 +147,7 @@ export default function AbstractPage() {
                 ></PostCard>
             </section>
 
-            <style jsx>
+            <style jsx global>
                 {`
                     html {
                         overflow-x: hidden;
@@ -154,15 +167,6 @@ export default function AbstractPage() {
                     a {
                         color: white;
                         text-decoration: none;
-                    }
-
-                    h2 {
-                        /* font-weight: 300; */
-                        letter-spacing: 1px;
-                        font-size: 2em;
-                        font-family: IBM Plex Serif, "Times New Roman", Times,
-                            serif;
-                        margin-top: 0.1em;
                     }
 
                     #tr1 {

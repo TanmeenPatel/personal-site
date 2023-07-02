@@ -9,7 +9,7 @@ export default function PostCard({ title, desc, info }) {
                         src="/assets/read.svg"
                         className={styles["read-more"]}
                     />
-                    <h2 style={{ textAlign: "left" }}>{title}</h2>
+                    <h2>{title}</h2>
                     <span className={styles["about-art"]}>
                         {desc}
                         <br />
@@ -18,6 +18,19 @@ export default function PostCard({ title, desc, info }) {
                     </span>
                 </a>
             </div>
+
+            <style jsx>
+                {`
+                    h2 {
+                        /* font-weight: 300; */
+                        letter-spacing: 1px;
+                        font-size: 2em;
+                        font-family: IBM Plex Serif, "Times New Roman", Times,
+                            serif;
+                        margin-top: 0.1em;
+                    }
+                `}
+            </style>
         </>
     );
 }
