@@ -1,6 +1,31 @@
 import styles from "@/styles/Home.module.css";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+    let [hamOpen, setHamOpen] = useState(0);
+    let toggleHam = () => {
+        setHamOpen(hamOpen ? 0 : 1);
+    };
+
+    useEffect(() => {
+        var x = document.getElementById("myLinks");
+        var y = document.getElementById("desc");
+        var z = document.getElementById("tr3");
+        var w = document.getElementById("stars");
+        if (hamOpen == 0) {
+            // when it's not open
+            x.style.display = "none";
+            y.style.marginTop = "90vh";
+            z.style.marginTop = "99.5vh";
+            w.style.backgroundImage = 'url("./src/stars.svg")';
+        } else {
+            // when it's open
+            x.style.display = "flex";
+            y.style.marginTop = "75vh";
+            z.style.marginTop = "84.5vh";
+            w.style.backgroundImage = "none";
+        }
+    }, [hamOpen]);
     return (
         <>
             <section>
@@ -23,11 +48,7 @@ export default function Hero() {
                             BLOG
                         </a>
                     </div>
-                    <a
-                        href="javascript:void(0);"
-                        className={styles.icon}
-                        onclick="myFunction()"
-                    >
+                    <a href="#" className={styles.icon} onClick={toggleHam}>
                         <img
                             src="/assets/hamburger.svg"
                             alt=""
@@ -136,6 +157,22 @@ export default function Hero() {
                         #myLinks a.icon {
                             display: block;
                             position: absolute;
+                        }
+
+                        #link1 {
+                            background-color: #8d46b9;
+                        }
+
+                        #link2 {
+                            background-color: #c8791d;
+                        }
+
+                        #link3 {
+                            background-color: #369545;
+                        }
+
+                        #link4 {
+                            background-color: #54b6c2;
                         }
                     }
                 `}
