@@ -17,7 +17,7 @@ export default function Hero() {
             x.style.display = "none";
             y.style.marginTop = "90vh";
             z.style.marginTop = "99.5vh";
-            w.style.backgroundImage = 'url("./src/stars.svg")';
+            w.style.backgroundImage = 'url("/assets/stars.svg")';
         } else {
             // when it's open
             x.style.display = "flex";

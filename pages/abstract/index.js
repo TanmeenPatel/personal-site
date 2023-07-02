@@ -29,21 +29,6 @@ export default function AbstractPage() {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="true"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap"
-                    rel="stylesheet"
-                />
-                <link rel="icon" href="/favicon.svg" />
             </Head>
             <section className={styles.sect1}>
                 <div id="myLinks">
