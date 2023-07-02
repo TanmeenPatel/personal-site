@@ -1,4 +1,5 @@
 import PostCard from "@/components/PostCard/PostCard";
+import PostSection from "@/components/PostSection/PostSection";
 import Head from "next/head";
 
 import { useEffect, useState } from "react";
@@ -115,22 +116,7 @@ export default function AbstractPage() {
                     </a>
                 </div>
             </section>
-            <section className={styles.sect2}>
-                <PostCard
-                    title="Do Prisons Work?"
-                    desc="Prisons have been in use for over a millennium, but
-                            are they really effective in fulfilling their goals?
-                            Actually, what are their goals?"
-                    info="6 MINS, 345 WORDS"
-                ></PostCard>
-                <PostCard
-                    title="Why I hate Anupamaa."
-                    desc="I am of the opinion that Anupamaa represents everything
-                        that is wrong with the modern day Indian soap opera. You
-                        cant change my opinion."
-                    info="4 MINS, 210 WORDS"
-                ></PostCard>
-            </section>
+            <PostSection></PostSection>
 
             <style jsx global>
                 {`

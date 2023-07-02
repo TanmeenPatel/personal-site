@@ -86,6 +86,26 @@
     display: none;
 }
 
+.loader {
+    margin: 0 auto;
+    text-align: center;
+    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: #d86bb9;
+}
+
+.loadMore {
+    background: none;
+    border: none;
+    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: #d86bb9;
+}
+
+.loadMoreDiv {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     #tr1 {
         display: none;

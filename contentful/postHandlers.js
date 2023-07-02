@@ -1,7 +1,6 @@
-import { AppConfig } from "@utils/config";
-const contentful = require("contentful");
+import { createClient } from "contentful";
 
-const client = contentful.createClient({
+const client = createClient({
     space: process.env["NEXT_PUBLIC_CONTENTFUL_SPACE_ID"],
     accessToken: process.env["NEXT_PUBLIC_CONTENTFUL_API_TOKEN"],
 });
@@ -16,11 +15,11 @@ export let LoadAllTags = async () => {
 };
 
 export let GetPosts = async (iter) => {
-    const lim = AppConfig.postsPerLoad;
+    const lim = 3;
     const skipCount = iter * lim;
     let res = await client.getEntries({
         content_type: "post",
-        select: "sys.id,fields.title,fields.desc,fields.slug,fields.readingTime,metadata.tags",
+        select: "sys.id,fields.title,fields.desc,fields.slug,metadata.tags",
         order: "-sys.createdAt",
         limit: lim,
         skip: skipCount,

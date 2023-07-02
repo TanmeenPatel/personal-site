@@ -1,10 +1,13 @@
 import styles from "./PostCard.module.css";
 
-export default function PostCard({ title, desc, info }) {
+export default function PostCard({ title, desc, info, link }) {
     return (
         <>
             <div className={styles.article}>
-                <a href="/abstract/id" className={styles["article-link"]}>
+                <a
+                    href={link ? `/abstract/${link}` : "/abstract/id"}
+                    className={styles["article-link"]}
+                >
                     <img
                         src="/assets/read.svg"
                         className={styles["read-more"]}
