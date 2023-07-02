@@ -4,7 +4,7 @@ export default function PostCard({ title, desc, info }) {
     return (
         <>
             <div className={styles.article}>
-                <a href="article.html" className={styles["article-link"]}>
+                <a href="/abstract/id" className={styles["article-link"]}>
                     <img
                         src="/assets/read.svg"
                         className={styles["read-more"]}

@@ -1,0 +1,28 @@
+.triangles {
+    position: absolute;
+    width: 18vw;
+    margin-left: 82vw;
+}
+
+.return a {
+    color: white;
+    text-decoration: none;
+}
+
+.return a:hover {
+    color: rgb(200, 200, 200);
+    text-decoration: underline;
+}
+
+.read-info {
+    font-size: 1em;
+    margin-left: 3vw;
+    font-weight: 600;
+}
+
+.article {
+    margin-top: 5vh;
+    font-size: 0.8em;
+    margin-left: 3vw;
+    width: 94vw;
+}
