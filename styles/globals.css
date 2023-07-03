@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: #1d1d1d;
+    font-size: 24px;
+    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}

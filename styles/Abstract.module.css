@@ -1,17 +1,3 @@
-html {
-    overflow-x: hidden;
-}
-
-body {
-    margin: 0;
-    font-size: 24px;
-    background-color: #1d1d1d;
-    font-family: IBM Plex Mono, 'Courier New', Courier, monospace;
-    color: white;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 .sect1 {
     height: 99vh;
     border-bottom: 2px solid white;
@@ -29,7 +15,7 @@ body {
 }
 
 .main {
-    background-image: url(../src/stars2.svg);
+    background-image: url(/assets/stars2.svg);
     background-repeat: cover;
     display: flex;
     flex-direction: column;
@@ -44,24 +30,6 @@ body {
 
 .main-mob {
     display: none;
-}
-
-#landing-img {
-    width: 25vw;
-}
-
-#landing-text {
-    text-align: center;
-    margin-top: 5vh;
-    width: 60vw;
-    font-size: 0.9em;
-}
-
-#tr1 {
-    position: absolute;
-    width: 15vw;
-    margin-left: 85vw;
-    z-index: 2;
 }
 
 .tr1-mob {
@@ -114,75 +82,31 @@ body {
     width: 100vw;
 }
 
-.article {
-    display: flex;
-    flex-direction: column;
-    margin: 8vh auto;
-    width: 90vw;
-    padding: 1.5em;
-}
-
-h2 {
-    /* font-weight: 300; */
-    letter-spacing: 1px;
-    font-size: 2em;
-    font-family: IBM Plex Serif, 'Times New Roman', Times, serif;
-    margin-top: 0.1em;
-}
-
-.article:first-of-type {
-    margin-top: 5vh;
-}
-
-.about-art {
-    display: block;
-    font-size: 0.8em;
-    width: 70vw;
-}
-
-.read-more {
-    justify-self: center;
-    margin-left: 83vw;
-    width: 7vw;
-    position: absolute;
-    margin-top: 2em;
-}
-
-.article:nth-of-type(2n) {
-    background-color: #2E2E2E;
-    border-radius: 6px;
-}
-
-#myLinks {
-    display: none;
-}
-
 .ham-menu {
     display: none;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.loader {
+    margin: 0 auto;
+    text-align: center;
+    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: #d86bb9;
 }
 
-.article-link {
-    text-align: unset;
+.loadMore {
+    background: none;
+    border: none;
+    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: #d86bb9;
 }
 
-.article-link-svg {
-    justify-self: center;
-    margin-left: 83vw;
-    width: 7vw;
-    position: absolute;
-    margin-top: 2em;
+.loadMoreDiv {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 20px;
-    }
-
     #tr1 {
         display: none;
     }
@@ -228,11 +152,11 @@ a {
     }
 
     #link1 {
-        background-color: #8D46B9;
+        background-color: #8d46b9;
     }
 
     #link2 {
-        background-color: #C8791D;
+        background-color: #c8791d;
     }
 
     #link3 {
@@ -240,7 +164,7 @@ a {
     }
 
     #link4 {
-        background-color: #54B6C2;
+        background-color: #54b6c2;
     }
 
     .main {
@@ -288,7 +212,7 @@ a {
     .main-mob {
         height: 90vh;
         display: block;
-        background-image: url(../src/starsabmob.svg);
+        background-image: url(/assets/starsabmob.svg);
         background-repeat: cover;
         border-bottom: 2px solid white;
     }
