@@ -23,21 +23,25 @@ export default function PostSection() {
 
     useEffect(() => {
         setLoaded(false);
-        let d = JSON.parse(sessionStorage.getItem("data"));
-        if (d.length !== 0) {
-            let i = parseInt(sessionStorage.getItem("iter"));
-            let more = sessionStorage.getItem("isMore") == "true";
-            setLoaded(true);
-            setData(d);
-            setIter(i);
-            setMore(more);
-        } else {
-            GetPosts(iter).then(([posts, more]) => {
+        try {
+            let d = JSON.parse(sessionStorage.getItem("data"));
+            if (d.length !== 0) {
+                let i = parseInt(sessionStorage.getItem("iter"));
+                let more = sessionStorage.getItem("isMore") == "true";
                 setLoaded(true);
-                setData(posts);
-                setIter(iter + 1);
+                setData(d);
+                setIter(i);
                 setMore(more);
-            });
+            } else {
+                GetPosts(iter).then(([posts, more]) => {
+                    setLoaded(true);
+                    setData(posts);
+                    setIter(iter + 1);
+                    setMore(more);
+                });
+            }
+        } catch (err) {
+            console.error(err);
         }
     }, []);
 
