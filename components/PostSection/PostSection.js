@@ -4,52 +4,55 @@ import { GetPosts } from "@/contentful/postHandlers";
 import PostCard from "../PostCard/PostCard";
 
 export default function PostSection() {
-    let [isLoaded, setLoaded] = useState(true);
-    let [data, setData] = useState([]);
-    let [iter, setIter] = useState(0);
-    let [isMore, setMore] = useState(true);
+    const [iter, setIter] = useState(0);
+    const [more, setMore] = useState(true);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     function LoadMorePosts() {
-        setLoaded(false);
+        setLoading(true);
         GetPosts(iter)
-            .then(([posts, more]) => {
-                setLoaded(true);
+            .then(([posts, func_more]) => {
                 setData((d) => [...d, ...posts]);
                 setIter(iter + 1);
-                setMore(more);
+                setMore(func_more);
             })
-            .catch((err) => alert("oops an error occured"));
+            .catch((err) => alert("oops an error occured"))
+            .finally(setLoading(false));
     }
 
     useEffect(() => {
-        setLoaded(false);
+        setLoading(true);
+        let loaded_data;
         try {
-            let d = JSON.parse(sessionStorage.getItem("data"));
-            if (d.length !== 0) {
-                let i = parseInt(sessionStorage.getItem("iter"));
-                let more = sessionStorage.getItem("isMore") == "true";
-                setLoaded(true);
-                setData(d);
-                setIter(i);
-                setMore(more);
-            } else {
-                GetPosts(iter).then(([posts, more]) => {
-                    setLoaded(true);
-                    setData(posts);
-                    setIter(iter + 1);
-                    setMore(more);
-                });
-            }
+            loaded_data = JSON.parse(sessionStorage.getItem("data"));
         } catch (err) {
-            console.error(err);
+            loaded_data = [];
         }
+        if (loaded_data && loaded_data.length !== 0) {
+            let loaded_iter = parseInt(sessionStorage.getItem("iter"));
+            let loaded_more = sessionStorage.getItem("more") == "true";
+            setData(loaded_data);
+            setIter(loaded_iter);
+            setMore(loaded_more);
+        } else {
+            const fetchData = async (iter) => {
+                const [posts, func_more] = await GetPosts(iter);
+                setIter(iter + 1);
+                setMore(func_more);
+                setData(posts);
+            };
+
+            fetchData(iter).catch((err) => console.error(err));
+        }
+        setLoading(false);
     }, []);
 
     useEffect(() => {
         sessionStorage.setItem("data", JSON.stringify(data));
-        sessionStorage.setItem("iter", iter);
-        sessionStorage.setItem("isMore", isMore);
-    }, [data, isMore, iter]);
+        sessionStorage.setItem("more", String(more));
+        sessionStorage.setItem("iter", String(iter));
+    }, [data, more, iter]);
 
     return (
         <>
@@ -66,8 +69,8 @@ export default function PostSection() {
                             />
                         );
                     })}
-                {!isLoaded && <div className={styles.loader}>Loading...</div>}
-                {isMore && isLoaded && (
+                {loading && <div className={styles.loader}>Loading...</div>}
+                {more && !loading && (
                     <div className={styles.loadMoreDiv}>
                         <button
                             className={styles.loadMore}
