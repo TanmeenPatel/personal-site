@@ -1,12 +1,13 @@
 import PostCard from "@/components/PostCard/PostCard";
 import PostSection from "@/components/PostSection/PostSection";
+import { GetPosts } from "@/contentful/postHandlers";
 import Head from "next/head";
 
 import { useEffect, useState } from "react";
 
 import styles from "@/styles/Abstract.module.css";
 
-export default function AbstractPage() {
+export default function AbstractPage({ posts }) {
     let [hamOpen, setHamOpen] = useState(0);
     let toggleHam = () => {
         setHamOpen(hamOpen ? 0 : 1);
@@ -116,7 +117,7 @@ export default function AbstractPage() {
                     </a>
                 </div>
             </section>
-            <PostSection></PostSection>
+            <PostSection posts={posts}></PostSection>
 
             <style jsx global>
                 {`
@@ -230,4 +231,11 @@ export default function AbstractPage() {
             </style>
         </>
     );
+}
+
+export async function getStaticProps() {
+    const posts = await GetPosts();
+    return {
+        props: { posts },
+    };
 }

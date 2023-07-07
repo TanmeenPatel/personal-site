@@ -86,24 +86,37 @@
     display: none;
 }
 
-.loader {
-    margin: 0 auto;
-    text-align: center;
-    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
-    font-size: 1.2rem;
-    color: #d86bb9;
+.pagination {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0;
+    width: min-content;
 }
 
-.loadMore {
-    background: none;
-    border: none;
-    font-family: IBM Plex Mono, "Courier New", Courier, monospace;
-    font-size: 1.2rem;
-    color: #d86bb9;
+.pageLink {
+    cursor: pointer;
 }
 
-.loadMoreDiv {
+/* pagination pageItem */
+.pageItem {
     text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* pagination page item when active */
+.pageItemActive {
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #eaeaea;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

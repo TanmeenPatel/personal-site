@@ -1,82 +1,55 @@
 import styles from "@/styles/Abstract.module.css";
-import { useEffect, useState } from "react";
-import { GetPosts } from "@/contentful/postHandlers";
+import Pagination, { paginate } from "../Pagination/Pagination";
 import PostCard from "../PostCard/PostCard";
+import { useState, useEffect } from "react";
 
-export default function PostSection() {
-    let [isLoaded, setLoaded] = useState(true);
-    let [data, setData] = useState([]);
-    let [iter, setIter] = useState(0);
-    let [isMore, setMore] = useState(true);
+export default function PostSection({ posts }) {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [loaded, setLoaded] = useState(false);
+    const pageSize = 3;
 
-    function LoadMorePosts() {
-        setLoaded(false);
-        GetPosts(iter)
-            .then(([posts, more]) => {
-                setLoaded(true);
-                setData((d) => [...d, ...posts]);
-                setIter(iter + 1);
-                setMore(more);
-            })
-            .catch((err) => alert("oops an error occured"));
-    }
+    const onPageChange = (page) => {
+        setCurrentPage(page);
+    };
 
     useEffect(() => {
-        setLoaded(false);
-        try {
-            let d = JSON.parse(sessionStorage.getItem("data"));
-            if (d.length !== 0) {
-                let i = parseInt(sessionStorage.getItem("iter"));
-                let more = sessionStorage.getItem("isMore") == "true";
-                setLoaded(true);
-                setData(d);
-                setIter(i);
-                setMore(more);
-            } else {
-                GetPosts(iter).then(([posts, more]) => {
-                    setLoaded(true);
-                    setData(posts);
-                    setIter(iter + 1);
-                    setMore(more);
-                });
-            }
-        } catch (err) {
-            console.error(err);
+        let p = sessionStorage.getItem("current_page");
+        if (p) {
+            let cur_page = parseInt(p);
+            console.log("Setting");
+            setCurrentPage(cur_page);
         }
+        setLoaded(true);
     }, []);
 
     useEffect(() => {
-        sessionStorage.setItem("data", JSON.stringify(data));
-        sessionStorage.setItem("iter", iter);
-        sessionStorage.setItem("isMore", isMore);
-    }, [data, isMore, iter]);
+        if (!loaded) return;
+        console.log("Setting in sessionStorage");
+        sessionStorage.setItem("current_page", JSON.parse(currentPage));
+    }, [currentPage]);
+
+    const paginatedPosts = paginate(currentPage, pageSize, posts);
 
     return (
         <>
             <section className={styles.sect2}>
-                {data &&
-                    data.map((post) => {
-                        return (
-                            <PostCard
-                                title={post.fields.title}
-                                desc={post.fields.desc}
-                                info="6 MINS, 345 WORDS"
-                                link={post.fields.slug}
-                                key={post.sys.id}
-                            />
-                        );
-                    })}
-                {!isLoaded && <div className={styles.loader}>Loading...</div>}
-                {isMore && isLoaded && (
-                    <div className={styles.loadMoreDiv}>
-                        <button
-                            className={styles.loadMore}
-                            onClick={LoadMorePosts}
-                        >
-                            Load More Posts
-                        </button>
-                    </div>
-                )}
+                {paginatedPosts.map((post) => {
+                    return (
+                        <PostCard
+                            title={post.fields.title}
+                            desc={post.fields.desc}
+                            info="6 MINS, 345 WORDS"
+                            link={post.fields.slug}
+                            key={post.sys.id}
+                        />
+                    );
+                })}
+                <Pagination
+                    current_page={currentPage}
+                    page_size={pageSize}
+                    onPageChange={onPageChange}
+                    posts_length={posts.length}
+                ></Pagination>
             </section>
         </>
     );

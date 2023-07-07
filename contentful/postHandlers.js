@@ -15,14 +15,10 @@ export let LoadAllTags = async () => {
 };
 
 export let GetPosts = async (iter) => {
-    const lim = 3;
-    const skipCount = iter * lim;
     let res = await client.getEntries({
         content_type: "post",
         select: "sys.id,fields.title,fields.desc,fields.slug,metadata.tags",
         order: "-sys.createdAt",
-        limit: lim,
-        skip: skipCount,
     });
 
     let resEd = await Promise.all(
@@ -36,9 +32,7 @@ export let GetPosts = async (iter) => {
         })
     );
 
-    let more = resEd.length == lim;
-
-    return [resEd, more];
+    return resEd;
 };
 
 export let GetAPost = async (slug) => {
