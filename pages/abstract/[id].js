@@ -33,7 +33,9 @@ export default function PostPage(props) {
             </div>
             <div className={styles["heading-info"]}>
                 <h1>{props.title}</h1>
-                <span className={styles["read-info"]}>345 words, 6 mins</span>
+                <span className={styles["read-info"]}>
+                    {props.wordCount} words, {props.readingTime} mins
+                </span>
             </div>
             <div
                 className={styles["article"]}
@@ -88,7 +90,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     let slug = params.id;
     let data = await GetAPost(slug);
-    let { title, content } = data.fields;
+    let { title, content, wordCount } = data.fields;
+
+    const average_wpm = 200;
+    const readingTime = Math.ceil(wordCount / average_wpm);
     let { createdAt, updatedAt } = data.sys;
     let parsed = await remark().use(html).process(content);
     let str_content = parsed.toString();
@@ -98,6 +103,8 @@ export async function getStaticProps({ params }) {
             created: createdAt.toDateString(),
             updated: updatedAt.toDateString(),
             content: str_content,
+            readingTime,
+            wordCount,
         },
         revalidate: 30,
     };

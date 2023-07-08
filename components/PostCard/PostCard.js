@@ -1,6 +1,8 @@
 import styles from "./PostCard.module.css";
 
-export default function PostCard({ title, desc, info, link }) {
+export default function PostCard({ title, desc, link, wordCount }) {
+    const average_wpm = 200;
+    const readingTime = Math.ceil(wordCount / average_wpm);
     return (
         <>
             <div className={styles.article}>
@@ -17,7 +19,7 @@ export default function PostCard({ title, desc, info, link }) {
                         {desc}
                         <br />
                         <br />
-                        {info}
+                        {readingTime} MINS, {wordCount} WORDS
                     </span>
                 </a>
             </div>

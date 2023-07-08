@@ -38,8 +38,8 @@ export default function PostSection({ posts }) {
                         <PostCard
                             title={post.fields.title}
                             desc={post.fields.desc}
-                            info="6 MINS, 345 WORDS"
                             link={post.fields.slug}
+                            wordCount={post.fields.wordCount}
                             key={post.sys.id}
                         />
                     );

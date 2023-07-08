@@ -237,5 +237,6 @@ export async function getStaticProps() {
     const posts = await GetPosts();
     return {
         props: { posts },
+        revalidate: 30,
     };
 }
