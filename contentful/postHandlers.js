@@ -17,7 +17,7 @@ export let LoadAllTags = async () => {
 export let GetPosts = async (iter) => {
     let res = await client.getEntries({
         content_type: "post",
-        select: "sys.id,fields.title,fields.desc,fields.slug,metadata.tags",
+        select: "sys.id,fields.title,fields.desc,fields.slug,metadata.tags,fields.wordCount",
         order: "-sys.createdAt",
     });
 
@@ -38,7 +38,7 @@ export let GetPosts = async (iter) => {
 export let GetAPost = async (slug) => {
     let res = await client.getEntries({
         content_type: "post",
-        select: "fields.title,fields.content,fields.slug,sys.createdAt,sys.updatedAt",
+        select: "fields.title,fields.content,fields.slug,sys.createdAt,sys.updatedAt,fields.wordCount",
         "fields.slug": slug,
     });
     res.items[0].sys.createdAt = new Date(res.items[0].sys.createdAt);
