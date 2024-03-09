@@ -65,7 +65,7 @@ export default function Interests() {
                             >
                                 GITHUB
                             </a>
-                            <a href="#" className={styles["soc-links"]}>
+                            <a href="https://www.linkedin.com/in/tanmeen-patel" className={styles["soc-links"]} target="_blank">
                                 LINKEDIN
                             </a>
                             <a

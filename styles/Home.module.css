@@ -23,6 +23,7 @@
 }
 
 .tr2 {
+    display: none;
     position: absolute;
     width: 26vw;
     margin-left: 74vw;

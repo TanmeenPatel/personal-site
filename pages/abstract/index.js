@@ -16,11 +16,15 @@ export default function AbstractPage({ posts }) {
     useEffect(() => {
         var x = document.getElementById("myLinks");
         var y = document.getElementById("desc");
+        var z = document.getElementById("landing-text");
         if (hamOpen == 0) {
             x.style.display = "none";
+            y.style.display = "flex";
+            z.style.display = "block";
         } else {
             x.style.display = "flex";
-            y.style.marginTop = "75vh";
+            y.style.display = "none";
+            z.style.display = "none";
         }
     }, [hamOpen]);
     return (

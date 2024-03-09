@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 
 const client = createClient({
     space: process.env["NEXT_PUBLIC_CONTENTFUL_SPACE_ID"],
-    accessToken: process.env["NEXT_PUBLIC_CONTENTFUL_API_TOKEN"],
+    accessToken: process.env["NEXT_PUBLIC_CONTENTFUL_API_TOKEN"]
 });
 
 export let LoadAllTags = async () => {

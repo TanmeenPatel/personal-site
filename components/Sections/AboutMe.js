@@ -6,7 +6,7 @@ export default function AboutMe() {
             <section id="aboutme">
                 <div className={styles.container2}>
                     <img
-                        src="/assets/photo3.png"
+                        src="/assets/photo3.jpg"
                         alt="Tanmeen's Photo 3"
                         className={styles.photo3}
                     />

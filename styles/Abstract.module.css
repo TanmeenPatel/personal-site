@@ -141,6 +141,7 @@
 
     #myLinks a {
         display: block;
+        align-self: center;
         color: white;
         width: 30vw;
         margin: 10px;

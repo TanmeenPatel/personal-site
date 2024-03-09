@@ -103,7 +103,7 @@ export default function Hero() {
                     </div>
                     <div className={styles.desc} id="desc">
                         <span id="desc-text">
-                            developer, designer, ice cream enthusiast
+                            developer and ice cream enthusiast
                         </span>
                     </div>
                     <img src="/assets/triangles2.svg" className={styles.tr2} />
