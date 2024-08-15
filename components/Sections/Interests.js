@@ -11,9 +11,7 @@ export default function Interests() {
                         remotely cool. I&apos;ve tried seeking this feeling
                         everywhere I go, leading to some truly unique hobbies.
                         <br />
-                        <br />I love solving Rubik&apos;s cubes, playing
-                        football, taking photos, and doing (an extremely watered
-                        down version of) parkour.
+                        <br />I love solving Rubik&apos;s cubes, watching movies, taking photos, and creating fun projects.
                     </p>
                     <p className={styles["about2-mob"]}>
                         From a young age, I&apos;ve felt that rush of adrenaline
@@ -21,9 +19,7 @@ export default function Interests() {
                         remotely cool. I&apos;ve tried seeking this feeling
                         everywhere I go.
                         <br />
-                        <br />I love solving Rubik&apos;s cubes, playing
-                        football, taking photos, and doing (an extremely watered
-                        down version of) parkour.
+                        <br />I love solving Rubik&apos;s cubes, watching movies, taking photos, and creating fun projects.
                     </p>
                     <p className={styles.blog}>
                         Read my blog{" "}
